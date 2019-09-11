@@ -30,7 +30,7 @@
 <h2 class="tutheader">实现</h2>
 <p>我们将创建一个 <i>Shape</i> 接口和实现 <i>Shape</i> 接口的实体类。下一步是定义工厂类 <i>ShapeFactory</i>。</p>
 <p><i>FactoryPatternDemo</i>，我们的演示类使用 <i>ShapeFactory</i> 来获取 <i>Shape</i> 对象。它将向 <i>ShapeFactory</i> 传递信息（<i>CIRCLE / RECTANGLE / SQUARE</i>），以便获取它所需对象的类型。</p>
-<img alt="工厂模式的 UML 图" src="/wp-content/uploads/2014/08/factory_pattern_uml_diagram.jpg">
+<img alt="工厂模式的 UML 图" src="https://www.runoob.com/wp-content/uploads/2014/08/factory_pattern_uml_diagram.jpg">
 <h3>步骤 1</h3>
 <p>创建一个接口:</p>
 <div class="example">
@@ -125,11 +125,5 @@
 <pre class="prettyprint prettyprinted"><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Circle</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span><span class="pln">
 </span><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Rectangle</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span><span class="pln">
 </span><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Square</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span></pre>
-<h3>其他相关文章</h3>
-
-<blockquote><ul><li>
-<p><a href="//www.runoob.com/w3cnote/factory-pattern.html" target="_blank" rel="noopener">设计模式 – 工厂模式</a></p>
-</li></ul></blockquote>
-<!-- 其他扩展 -->
 </div>
 </div>

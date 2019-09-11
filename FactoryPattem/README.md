@@ -44,449 +44,122 @@ _FactoryPatternDemo_，我们的演示类使用 _ShapeFactory_ 来获取 _Shape_
 
 创建一个接口:
 
-    <div class="example"> 
-
 ## Shape.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">interface</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">void</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
-
+```  
+public interface Shape {
+   void draw();
+}
+```  
+     
 ### 步骤 2
 
 创建实现接口的实体类。
 
-    <div class="example"> 
-
 ## Rectangle.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">class</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Rectangle</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">implements</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> @</span>
-       <span class="hl-identifier">Override</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">void</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">System</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">out</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">println</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">Inside Rectangle::draw() method.</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
-    <div class="example"> 
+```  
+public class Rectangle implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Rectangle::draw() method.");
+   }
+}
+```  
 
 ## Square.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">class</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Square</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">implements</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> @</span>
-       <span class="hl-identifier">Override</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">void</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">System</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">out</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">println</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">Inside Square::draw() method.</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
-    <div class="example"> 
+```  
+public class Square implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Square::draw() method.");
+   }
+}
+```  
 
 ## Circle.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">class</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Circle</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">implements</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> @</span>
-       <span class="hl-identifier">Override</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">void</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">System</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">out</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">println</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">Inside Circle::draw() method.</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
+```  
+public class Circle implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Circle::draw() method.");
+   }
+}
+```  
 
 ### 步骤 3
 
 创建一个工厂，生成基于给定信息的实体类的对象。
 
-    <div class="example"> 
-
 ## ShapeFactory.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">class</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">ShapeFactory</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">使用 getShape 方法获取形状类型的对象</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">getShape</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">String</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shapeType</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">if</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">shapeType</span>
-       <span class="hl-code"> == </span>
-       <span class="hl-reserved">null</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">return</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">null</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">if</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">shapeType</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">equalsIgnoreCase</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">CIRCLE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">return</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">new</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Circle</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">else</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">if</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">shapeType</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">equalsIgnoreCase</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">RECTANGLE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">return</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">new</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Rectangle</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">else</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">if</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">shapeType</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">equalsIgnoreCase</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">SQUARE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">return</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">new</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Square</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">return</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">null</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
+```  
+public class ShapeFactory {
+    
+   //使用 getShape 方法获取形状类型的对象
+   public Shape getShape(String shapeType){
+      if(shapeType == null){
+         return null;
+      }        
+      if(shapeType.equalsIgnoreCase("CIRCLE")){
+         return new Circle();
+      } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+         return new Rectangle();
+      } else if(shapeType.equalsIgnoreCase("SQUARE")){
+         return new Square();
+      }
+      return null;
+   }
+}
+```  
 
 ### 步骤 4
 
 使用该工厂，通过传递类型信息来获取实体类的对象。
 
-    <div class="example"> 
-
 ## FactoryPatternDemo.java
 
-     <div class="example_code"> 
-      <div class="hl-main">
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">class</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">FactoryPatternDemo</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-reserved">public</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">static</span>
-       <span class="hl-code"> </span>
-       <span class="hl-types">void</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">main</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-identifier">String</span>
-       <span class="hl-brackets">[</span>
-       <span class="hl-brackets">]</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">args</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">{</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">ShapeFactory</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shapeFactory</span>
-       <span class="hl-code"> = </span>
-       <span class="hl-reserved">new</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">ShapeFactory</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">获取 Circle 的对象，并调用它的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape1</span>
-       <span class="hl-code"> = </span>
-       <span class="hl-identifier">shapeFactory</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">getShape</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">CIRCLE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">调用 Circle 的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape1</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">获取 Rectangle 的对象，并调用它的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape2</span>
-       <span class="hl-code"> = </span>
-       <span class="hl-identifier">shapeFactory</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">getShape</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">RECTANGLE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">调用 Rectangle 的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape2</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">获取 Square 的对象，并调用它的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">Shape</span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape3</span>
-       <span class="hl-code"> = </span>
-       <span class="hl-identifier">shapeFactory</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">getShape</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-string">SQUARE</span>
-       <span class="hl-quotes">&quot;</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-comment">//</span>
-       <span class="hl-comment">调用 Square 的 draw 方法</span>
-       <span class="hl-comment"></span>
-       <span class="hl-code"> </span>
-       <span class="hl-identifier">shape3</span>
-       <span class="hl-code">.</span>
-       <span class="hl-identifier">draw</span>
-       <span class="hl-brackets">(</span>
-       <span class="hl-brackets">)</span>
-       <span class="hl-code">; </span>
-       <span class="hl-brackets">}</span>
-       <span class="hl-code"> </span>
-       <span class="hl-brackets">}</span>
-      </div> 
-     </div>
-    </div> 
+```  
+public class FactoryPatternDemo {
+ 
+   public static void main(String[] args) {
+      ShapeFactory shapeFactory = new ShapeFactory();
+ 
+      //获取 Circle 的对象，并调用它的 draw 方法
+      Shape shape1 = shapeFactory.getShape("CIRCLE");
+ 
+      //调用 Circle 的 draw 方法
+      shape1.draw();
+ 
+      //获取 Rectangle 的对象，并调用它的 draw 方法
+      Shape shape2 = shapeFactory.getShape("RECTANGLE");
+ 
+      //调用 Rectangle 的 draw 方法
+      shape2.draw();
+ 
+      //获取 Square 的对象，并调用它的 draw 方法
+      Shape shape3 = shapeFactory.getShape("SQUARE");
+ 
+      //调用 Square 的 draw 方法
+      shape3.draw();
+   }
+}
+```  
 
 ### 步骤 5
 
 执行程序，输出结果：
 
-    <pre class="prettyprint prettyprinted" style=""><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Circle</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span><span class="pln">
-</span><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Rectangle</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span><span class="pln">
-</span><span class="typ">Inside</span><span class="pln"> </span><span class="typ">Square</span><span class="pun">::</span><span class="pln">draw</span><span class="pun">()</span><span class="pln"> method</span><span class="pun">.</span></pre> 
+```  
+Inside Circle::draw() method.
+Inside Rectangle::draw() method.
+Inside Square::draw() method.
+```  
    </div> 
   </div>
  </body>

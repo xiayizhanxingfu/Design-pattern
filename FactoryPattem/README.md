@@ -1,9 +1,3 @@
-<html>
- <head></head>
- <body>
-  <div class="article-body"> 
-   <div class="article-intro" id="content"> 
-
 # 工厂模式
 
 工厂模式（Factory Pattern）是 Java 中最常用的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
@@ -160,7 +154,3 @@ Inside Circle::draw() method.
 Inside Rectangle::draw() method.
 Inside Square::draw() method.
 ```  
-   </div> 
-  </div>
- </body>
-</html>

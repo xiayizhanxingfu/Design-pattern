@@ -38,7 +38,7 @@
 
 _FactoryPatternDemo_，我们的演示类使用 _ShapeFactory_ 来获取 _Shape_ 对象。它将向 _ShapeFactory_ 传递信息（_CIRCLE / RECTANGLE / SQUARE_），以便获取它所需对象的类型。
 
-    ![工厂模式的 UML 图](/wp-content/uploads/2014/08/factory_pattern_uml_diagram.jpg) 
+    ![工厂模式的 UML 图](https://www.runoob.com/wp-content/uploads/2014/08/factory_pattern_uml_diagram.jpg) 
 
 ### 步骤 1
 

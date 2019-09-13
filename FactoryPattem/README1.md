@@ -1,4 +1,43 @@
 # 使用工厂模式设计数据库连接池
+## 各种数据库的连接
+>不同数据库的类型虽然不同,但是使用jdbc连接步骤却是一样的,只是在获取驱动的URL上却不同
+<table> 
+	<thead> 
+		<tr> 
+			<th>RDBMS</th> 
+			<th>JDBC驱动程序名称</th> 
+			<th>URL格式</th> 
+		</tr>
+	</thead> 
+	<tbody> 
+		<tr> 
+			<td>MySQL</td> 
+			<td> <code>com.mysql.jdbc.Driver</code></td> 
+			<td> <code>jdbc:mysql://hostname/databaseName</code></td> 
+		</tr> 
+		<tr> 
+			<td>ORACLE</td> 
+			<td> <code>oracle.jdbc.driver.OracleDriver</code></td> 
+			<td> <code>@hostname:portNumber:databaseName</code></td> 
+		</tr> 
+		<tr> 
+			<td>PostgreSQL</td> 
+			<td> <code>org.postgresql.Driver</code></td> 
+			<td> <code>jdbc:postgresql://hostname:port/dbname</code></td> 
+		</tr> 
+		<tr> 
+			<td>DB2</td> 
+			<td> <code>com.ibm.db2.jdbc.net.DB2Driver</code></td> 
+			<td> <code>jdbc:db2:hostname:port Number/databaseName</code></td> 
+		</tr> 
+		<tr> 
+			<td>Sybase</td> 
+			<td> <code>com.sybase.jdbc.SybDriver</code></td> 
+			<td> <code>jdbc:sybase:Tds:hostname: portNumber/databaseName</code></td> 
+		</tr>
+	</tbody>
+</table> 
+
 ## 定义SQLConnection接口,要求实现获取Connection方法
 ```
 public interface SQLConnection {
@@ -169,5 +208,5 @@ public class Test {
 }
 ```
 
-## 结果
+## 结果  
 ![](img/1.png)

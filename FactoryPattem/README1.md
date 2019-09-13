@@ -35,6 +35,11 @@
 			<td> <code>com.sybase.jdbc.SybDriver</code></td> 
 			<td> <code>jdbc:sybase:Tds:hostname: portNumber/databaseName</code></td> 
 		</tr>
+		<tr>
+			<td>Sql Server</td> 
+			<td> <code>com.microsoft.sqlserver.jdbc.SQLServerDriver</code></td> 
+			<td> <code>jdbc:sqlserver://localhost:1433;databaseName=database</code></td> 
+		</tr>
 	</tbody>
 </table> 
 

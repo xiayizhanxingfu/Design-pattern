@@ -162,3 +162,6 @@ Inside Circle::draw() method.
 Inside Rectangle::draw() method.
 Inside Square::draw() method.
 ```  
+
+### 尝试使用工厂模式设计数据库连接池
+[使用工厂模式设计数据库连接池](README1.md)

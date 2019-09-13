@@ -43,6 +43,10 @@
 	</tbody>
 </table> 
 
+## 在这里分别为sql server和mysql设计,其他的自行扩展
+>设计之前首先要导入第三方库sql server驱动和mysql驱动  
+>[百度网盘下载 ](https://pan.baidu.com/s/1AaZv60sHTYnZiIOV2LBRBg)提取码：vyld
+
 ## 定义SQLConnection接口,要求实现获取Connection方法
 ```
 public interface SQLConnection {
@@ -58,9 +62,6 @@ public interface SQLConnection {
 
 ```
 
-## 在这里分别为sql server和mysql设计,其他的自行扩展
->设计之前首先要导入第三方库sql server驱动和mysql驱动  
->[百度网盘下载 ](https://pan.baidu.com/s/1AaZv60sHTYnZiIOV2LBRBg)提取码：vyld
 ## 为Sql Server设计连接工具
 ```
 public class SQLServer implements SQLConnection {

@@ -147,7 +147,7 @@ public abstract class AbstractFactory {
 ### 步骤 6  
 
 >创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象。  
-## ShapeFactory.java  
+>## ShapeFactory.java  
 
 ```  
 public class ShapeFactory extends AbstractFactory {
@@ -174,7 +174,7 @@ public class ShapeFactory extends AbstractFactory {
 }
 ```  
 
-## ColorFactory.java  
+>## ColorFactory.java  
 
 ```  
 public class ColorFactory extends AbstractFactory {

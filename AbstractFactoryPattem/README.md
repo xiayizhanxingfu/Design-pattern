@@ -144,10 +144,11 @@ public abstract class AbstractFactory {
 }
 ```  
 
-### 步骤 6
+### 步骤 6  
 
->创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象。
+>创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象。  
 ## ShapeFactory.java  
+
 ```  
 public class ShapeFactory extends AbstractFactory {
     
@@ -174,6 +175,7 @@ public class ShapeFactory extends AbstractFactory {
 ```  
 
 ## ColorFactory.java  
+
 ```  
 public class ColorFactory extends AbstractFactory {
     
@@ -202,7 +204,9 @@ public class ColorFactory extends AbstractFactory {
 ### 步骤 7  
 
 >创建一个工厂创造器/生成器类，通过传递形状或颜色信息来获取工厂。  
+
 ## FactoryProducer.java  
+
 ```  
 public class FactoryProducer {
    public static AbstractFactory getFactory(String choice){
@@ -219,6 +223,7 @@ public class FactoryProducer {
 ### 步骤 8  
 
 >使用 FactoryProducer 来获取   
+
 ```  
 public class AbstractFactoryPatternDemo {
    public static void main(String[] args) {

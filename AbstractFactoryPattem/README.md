@@ -46,9 +46,9 @@ public interface Shape {
 
 >创建实现接口的实体类。
 
->*Rectangle.java*
-## Rectangle.java
-```
+## Rectangle.java  
+
+```  
 public class Rectangle implements Shape {
  
    @Override
@@ -56,11 +56,12 @@ public class Rectangle implements Shape {
       System.out.println("Inside Rectangle::draw() method.");
    }
 }
-```
+```  
 
-## Square.java
-```
-Square.java
+## Square.java  
+
+```  
+
 public class Square implements Shape {
  
    @Override
@@ -68,9 +69,10 @@ public class Square implements Shape {
       System.out.println("Inside Square::draw() method.");
    }
 }
-```
+```  
 
-## Circle.java
+## Circle.java  
+
 ```
 public class Circle implements Shape {
  
@@ -79,23 +81,27 @@ public class Circle implements Shape {
       System.out.println("Inside Circle::draw() method.");
    }
 }
-```
+```  
 
-### 步骤 3
+### 步骤 3  
 
->为颜色创建一个接口。
-## Color.java
-```
+>为颜色创建一个接口。  
+
+## Color.java  
+
+```  
 public interface Color {
    void fill();
 }
-```
+```  
 
-### 步骤4
+### 步骤4  
 
->创建实现接口的实体类。
-## Red.java
-```
+>创建实现接口的实体类。  
+
+## Red.java  
+
+```  
 public class Red implements Color {
  
    @Override
@@ -105,8 +111,8 @@ public class Red implements Color {
 }
 ```
 
-## Green.java
-```
+## Green.java  
+```  
 public class Green implements Color {
  
    @Override
@@ -116,8 +122,8 @@ public class Green implements Color {
 }
 ```
 
-## Blue.java
-```
+## Blue.java  
+```  
 public class Blue implements Color {
  
    @Override
@@ -125,24 +131,24 @@ public class Blue implements Color {
       System.out.println("Inside Blue::fill() method.");
    }
 }
-```
+```  
 
-### 步骤 5
+### 步骤 5  
 
 >为 Color 和 Shape 对象创建抽象类来获取工厂。
-## AbstractFactory.java
-```
+## AbstractFactory.java  
+```  
 public abstract class AbstractFactory {
    public abstract Color getColor(String color);
    public abstract Shape getShape(String shape) ;
 }
-```
+```  
 
 ### 步骤 6
 
 >创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象。
-## ShapeFactory.java
-```
+## ShapeFactory.java  
+```  
 public class ShapeFactory extends AbstractFactory {
     
    @Override
@@ -165,10 +171,10 @@ public class ShapeFactory extends AbstractFactory {
       return null;
    }
 }
-```
+```  
 
-## ColorFactory.java
-```
+## ColorFactory.java  
+```  
 public class ColorFactory extends AbstractFactory {
     
    @Override
@@ -191,13 +197,13 @@ public class ColorFactory extends AbstractFactory {
       return null;
    }
 }
-```
+```  
 
-### 步骤 7
+### 步骤 7  
 
->创建一个工厂创造器/生成器类，通过传递形状或颜色信息来获取工厂。
-## FactoryProducer.java
-```
+>创建一个工厂创造器/生成器类，通过传递形状或颜色信息来获取工厂。  
+## FactoryProducer.java  
+```  
 public class FactoryProducer {
    public static AbstractFactory getFactory(String choice){
       if(choice.equalsIgnoreCase("SHAPE")){
@@ -208,12 +214,12 @@ public class FactoryProducer {
       return null;
    }
 }
-```
+```  
 
-### 步骤 8
+### 步骤 8  
 
->使用 FactoryProducer 来获取 
-```
+>使用 FactoryProducer 来获取   
+```  
 public class AbstractFactoryPatternDemo {
    public static void main(String[] args) {
  
@@ -260,8 +266,8 @@ public class AbstractFactoryPatternDemo {
       color3.fill();
    }
 }
-```
+```  
 
-### 步骤 9
+### 步骤 9  
 
->执行程序，输出结果：
+>执行程序，输出结果：  

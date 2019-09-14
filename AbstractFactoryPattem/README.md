@@ -36,6 +36,7 @@
 
 >为形状创建一个接口。
 ## Shape.java
+
 ```
 public interface Shape {
    void draw();
@@ -137,6 +138,7 @@ public class Blue implements Color {
 
 >为 Color 和 Shape 对象创建抽象类来获取工厂。
 ## AbstractFactory.java  
+
 ```  
 public abstract class AbstractFactory {
    public abstract Color getColor(String color);
